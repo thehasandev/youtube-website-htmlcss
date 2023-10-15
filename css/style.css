@@ -1,0 +1,419 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.header{
+  background: url(../images/edu1.jpg);
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.oberly{
+  background: rgba(0, 0, 0, 0.7);
+  height:100vh;
+  width: 100%;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+nav img{
+  padding:20px 0px 0px 20px;
+}
+.nav-links ul{
+  padding-right: 40px;
+}
+.nav-links ul li{
+  list-style: none;
+  display:inline-block;
+}
+.nav-links ul li a{
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding:0px 10px;
+}
+.nav-links ul li::after{
+   content:'';
+   width:0;
+   height: 3px;
+   background: orangered;
+   display: block;
+   margin: auto;
+   transition: .5s;
+   
+}
+.nav-links ul li:hover::after{
+  width:80%;
+}
+.nav_text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+ text-align: center;
+ color: #fff;
+}
+
+.nav_text h1{
+  font-size:40px;
+  padding-bottom: 20px;
+}
+.nav_text p{
+  padding-bottom:40px;
+}
+.nav_text a{
+  text-decoration: none;
+  border: 1px solid white;
+  color:#fff;
+  padding:20px 40px;
+  transition: .5s;
+  background: transparent;
+}
+.nav_text a:hover{
+  border: 1px solid orangered;
+  background: orangered;
+}
+
+
+nav .fa-solid{
+  display: none;
+}
+@media (max-width:700px){
+  .nav_text h1{
+    font-size:14px;
+   
+  }
+  .nav_text p{
+    padding-bottom:40px;
+    font-size:10px;
+  }
+  
+  .nav-links ul li{
+   display: block;
+   padding-top: 10px;
+  }
+  .nav-links{
+    position: absolute;
+    background:orangered;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition:1s;
+  }
+  .nav-links ul{
+    padding: 30px;
+  }
+
+  nav .fa-solid{
+    display: block;
+    color: #fff;
+    margin: 15px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+/* --------- course --------- */
+#course{
+  padding: 100px 0px;
+  text-align: center;
+
+}
+
+.course_header h1{
+  font-size: 30px;
+}
+.course_header p{
+  color:#777;
+}
+.row{
+  margin-top: 20px;
+  display: flex;
+  justify-content:space-around;
+
+}
+.course_col {
+	padding: 50px 20px;
+	background: #FBE9E7;
+	margin-right: 20px;
+	box-sizing: border-box;
+	border-radius: 20px;
+	flex-basis: 30%;
+  transition:1s;
+}
+.course_col h3{
+  font-size:18px;
+  padding-bottom: 10px;
+  
+}
+.course_col p{
+  font-size: 14px;
+  color: #777;
+  line-height: 22px;
+}
+.course_col:hover{
+box-shadow:0px 0px 20px 0px rgba(0, 0, 1, 0.5);
+}
+
+@media (max-width:700px){
+  .row{
+    flex-direction:column ;
+  
+  }
+
+  .course_col{
+    margin-bottom: 30px;
+    margin-left: 20px;
+    flex-basis:25%;
+  }
+}
+
+
+/* ------- campus ------ */
+
+#campus{
+  padding: 100px 0px;
+}
+.campus_text{
+  margin: auto;
+  text-align: center;
+}
+.campus_text h3{
+ font-size: 30px;
+}
+.campus_text p{
+  color: #777;
+}
+.row{
+  display: flex;
+
+}
+.campus_col{
+flex-basis:30% ;
+position: relative;
+overflow: hidden;
+border-radius: 15px;
+}
+.campus_col img{
+  width: 100%;
+  display: block;
+}
+
+
+.lear{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transition: .5s;
+}
+.lear:hover{
+  background: rgba(255, 0, 0, 0.8);
+}
+
+.lear h3{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color:#fff;
+  font-size: 30px;
+  opacity: 0;
+  font-weight: 300;
+  transition:.5s;
+}
+
+.lear:hover h3{
+  bottom: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
+@media (max-width:700px){
+.campus_col{
+  margin: 20px;
+}
+}
+
+
+/* ---------- facilits  --------  */
+
+#facilits{
+  padding: 100px 0px;
+}
+
+.facilits_text{
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+.facilits_text h3{
+  font-size: 30px;
+}
+.facilits_text p{
+  color:#777
+}
+
+.row{
+  display: flex;
+}
+.facilits_col{
+  flex-basis:31%;
+  border-radius: 10px;
+  margin: 20px;
+  overflow: hidden;
+}
+.facilits_col img{
+  width: 100%;
+  border-radius: 10px;
+  transition: .5s;
+}
+.facilits_col img:hover{
+  transform: scale(1.05);
+}
+.facilits_col h3{
+  font-weight: 300;
+  padding:15px 0px;
+}
+.facilits_col p{
+  color:#777;
+  line-height: 22px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------- testomonia -------- */
+#testomonia{
+  padding: 100px 0px;
+
+}
+.testomonia_text{
+  margin: auto;
+  width: 80%;
+  text-align: center;
+}
+.testomonia_text p{
+  color:#777;
+}
+
+
+.testomonia_col{
+  flex-basis: 44%;
+  text-align: left;
+  display: flex;
+  background: rgba(255, 68, 0, 0.237);
+  padding: 20px;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.testomonia_col img{
+  height:50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+
+}
+.testomonia_col p{
+  line-height:23px;
+  color:#777;
+}
+.testomonia_col h3{
+                    font-weight:500;
+                    padding:20px 0px 5px 0px;
+                  }
+
+ #add{
+  margin:0 auto;
+  background: url(../images/banner2.jpg);
+  
+  background-position: center;
+  background-size: cover;
+  width: 88%;
+  border-radius:30px;
+  position: relative;
+ } 
+ .add_overly{
+  padding: 200px 0px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius:30px;
+ }
+ .add_text h1{
+  text-align: center;
+  font-size:42px;
+  margin: auto;
+  color:#fff;
+  font-weight:600;
+  padding-bottom: 20px;
+  
+ } 
+ .add_text {
+  margin:0 auto;
+ }
+ .add_text a{
+  margin: auto;
+  width: 150px;
+  line-height: 50px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  border: 1px solid orangered;
+  transition: .6s;
+  
+ }
+ 
+ .add_text a:hover{
+  background: orangered;
+ }
+ @media (max-width:700px){
+  .add_text h1{
+    font-size:20px;
+   } 
+ }
+ /* ------ foooter -----  */
+ #footer{
+  padding:50px 0px;
+
+ }
+.footer_text{
+  width: 100%;
+  text-align: center;
+}
+.footer_text p{
+  font-size: 14px;
+  color: #777;
+  line-height: 24px;
+  padding:20px 0px 20px 0px;
+}
+.icons {
+  color:orangered;
+}
+.icons i{
+  margin-right: 10px;
+}
